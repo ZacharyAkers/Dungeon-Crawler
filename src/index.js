@@ -1,17 +1,45 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
+import ReactDOM             from 'react-dom';
+import { Provider }         from 'react-redux';
+import { PersistGate }      from 'redux-persist/integration/react';
+import ReactGA              from 'react-ga';
+import store, { persistor } from './config/store';
+import App                  from './App';
+import Spinner              from './components/spinner';
+import 'typeface-roboto';
+import 'typeface-montserrat';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// supresses enormous amount of console.logs
+/* global soundManager:false */
+import 'react-sound';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+soundManager.setup({
+  debugMode: false,
+  ignoreMobileRestrictions: true
+});
+
+class ConnectedApp extends Component {
+
+  // refresh the local storage in case the redux store structure is old
+  componentDidCatch() {
+    localStorage.clear();
+    window.location.reload();
+  }
+
+  render() {
+    return(
+      <Provider store={store}>
+        <PersistGate
+          loading={<Spinner />}
+          persistor={persistor}>
+
+          <App />
+
+        </PersistGate>
+      </Provider>
+    );
+  }
+}
+
+ReactDOM.render(<ConnectedApp />, document.getElementById('dungeon-crawler'));

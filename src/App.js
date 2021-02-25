@@ -1,25 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+import DownloadAppPopup       from './components/download-app-popup';
+import DialogManager          from './features/dialog-manager';
+import EndlessFloorCounter    from './components/endless-floor-counter';
+import Footer                 from './components/footer';
+import GameMenus              from './features/game-menus';
+import World                  from './features/world';
+import Viewport               from './components/viewport';
