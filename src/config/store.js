@@ -3,7 +3,6 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage                          from 'redux-persist/lib/storage';
 import thunk                            from 'redux-thunk';
 
-import appState  from '../features/app-state/reducer';
 import player    from '../features/player/reducer';
 import dialog    from '../features/dialog-manager/reducer';
 import map       from '../features/map/reducer';
