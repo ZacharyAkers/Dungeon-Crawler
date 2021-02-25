@@ -1,4 +1,4 @@
-import calculateDamage from '../../../utils/calculate-damage';
+import calculateDamage from '../../../utils/damage';
 
 export default function attackPlayer(monsterDamage) {
   return (dispatch, getState) => {

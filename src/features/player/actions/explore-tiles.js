@@ -1,4 +1,4 @@
-import getSurroundingTiles from '../../../utils/get-surrounding-tiles';
+import getSurroundingTiles from '../../../utils/surrounding-tiles';
 
 export default function exploreTiles(newPos) {
   return dispatch => {

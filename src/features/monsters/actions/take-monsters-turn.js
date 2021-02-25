@@ -1,7 +1,7 @@
 import attackPlayer    from './attack-player';
 import moveMonster     from './move-monster';
 import { SPRITE_SIZE } from '../../../config/constants';
-import { radiusTiles } from '../../../utils/get-surrounding-tiles';
+import { radiusTiles } from '../../../utils/surrounding-tiles';
 
 const MONSTER_ATTACK_RADIUS = 1;
 
