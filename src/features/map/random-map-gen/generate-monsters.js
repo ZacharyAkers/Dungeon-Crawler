@@ -1,5 +1,5 @@
 import generateMonsterType from './generate-monster-type';
-import arrContainArr       from '../../../utils/arr-contain-arr';
+import arrContainArr       from '../../../utils/arr';
 import getSurroundingTiles from '../../../utils/surrounding-tiles';
 import { MAP_DIMENSIONS }  from '../../../config/constants';
 // generates random monsters for a random map
