@@ -1,6 +1,6 @@
 import generateMonsterType from './generate-monster-type';
 import arrContainArr       from '../../../utils/arr-contain-arr';
-import getSurroundingTiles from '../../../utils/get-surrounding-tiles';
+import getSurroundingTiles from '../../../utils/surrounding-tiles';
 import { MAP_DIMENSIONS }  from '../../../config/constants';
 // generates random monsters for a random map
 export default function generateMonsters(floorNum, map, playerPos, playerLv) {
