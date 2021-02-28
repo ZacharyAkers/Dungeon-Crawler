@@ -1,7 +1,7 @@
 import _cloneDeep from 'lodash.clonedeep';
 
-import attachMetaToTiles    from '../../utils/meta-tiles';
-import generatePaddingTiles from '../../utils/padding-tiles';
+import attachMetaToTiles    from '../../utils/attach-meta-to-tiles';
+import generatePaddingTiles from '../../utils/generate-padding-tiles';
 import maps                 from '../../data/maps';
 
 const initialState = {

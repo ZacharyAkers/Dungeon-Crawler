@@ -2,7 +2,7 @@ import _cloneDeep from 'lodash.clonedeep';
 
 import { SPRITE_SIZE } from '../../config/constants';
 import monsterData     from '../../data/monsters';
-import uuidv4          from '../../utils/uuid.js';
+import uuidv4          from '../../utils/uuid-v4.js';
 
 const initialState = {
   components: {}

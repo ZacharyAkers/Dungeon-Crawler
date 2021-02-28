@@ -1,7 +1,7 @@
 import exploreTiles from './explore-tiles';
 import exploreChest from './explore-chest';
 import walkStairs   from './walk-stairs';
-import getNextTile  from '../../../utils/next-tile';
+import getNextTile  from '../../../utils/get-next-tile';
 import { SPRITE_SIZE, MAP_WIDTH, MAP_HEIGHT } from '../../../config/constants';
 
 export default function movePlayer(direction) {

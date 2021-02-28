@@ -1,7 +1,7 @@
 import { checkForMonster, getNewPosition, observeBoundaries } from './move-player';
-import calculateDamage from '../../../utils/damage';
-import calculateBonus  from '../../../utils/bonus';
-import getNextTile     from '../../../utils/next-tile';
+import calculateDamage from '../../../utils/calculate-damage';
+import calculateBonus  from '../../../utils/calculate-bonus';
+import getNextTile     from '../../../utils/get-next-tile';
 import { SPRITE_SIZE } from '../../../config/constants';
 
 export default function attackMonster() {

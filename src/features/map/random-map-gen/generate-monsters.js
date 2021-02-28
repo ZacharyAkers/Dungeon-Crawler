@@ -1,11 +1,14 @@
 import generateMonsterType from './generate-monster-type';
-import arrContainArr       from '../../../utils/arr';
-import getSurroundingTiles from '../../../utils/surrounding-tiles';
+import arrContainArr       from '../../../utils/arr-contain-arr';
+import getSurroundingTiles from '../../../utils/get-surrounding-tiles';
 import { MAP_DIMENSIONS }  from '../../../config/constants';
 // generates random monsters for a random map
 export default function generateMonsters(floorNum, map, playerPos, playerLv) {
 
   let availableTiles = [];
+  // we need to get the tiles from the surrounding tiles func,
+  // then reverse the coordinates because they come back in normal notation (y, x)
+  // but for the random map gen, we need them in (x, y)
   const vision = getSurroundingTiles(playerPos).tiles.map(tile => tile.reverse());
 
   for (let i = 0; i < MAP_DIMENSIONS[1]; i++) {

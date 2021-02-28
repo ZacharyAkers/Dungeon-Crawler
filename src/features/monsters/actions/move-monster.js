@@ -1,4 +1,4 @@
-import getNextTile     from '../../../utils/next-tile';
+import getNextTile     from '../../../utils/get-next-tile';
 import { SPRITE_SIZE } from '../../../config/constants';
 
 // recursive function for moving the monster to the next available tile

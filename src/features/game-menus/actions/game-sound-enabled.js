@@ -1,5 +1,6 @@
+
 export default function gameSoundEnabled() {
-    return (_, getState) => {
-      return getState().gameMenu.sound;
-    };
-  }
+  return (_, getState) => {
+    return getState().gameMenu.sound;
+  };
+}
