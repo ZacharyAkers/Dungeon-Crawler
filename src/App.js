@@ -19,17 +19,14 @@ const App = ({ appState, world }) => {
   const [showDownloadPopup, setShowDownloadPopup] = useState(false);
 
   // disable scrolling of the page
-  // prevents iOS Safari bouncing during movement
   useEffect(() => {
     disableBodyScroll(document.getElementById('react-rpg'));
     return clearAllBodyScrollLocks;
   }, []);
 
-  // if this is not the react native app and they haven't opted out,
-  // show the user a dialog to download the app
   useEffect(() => {
     if(!nativeApp && !optOutDownload) {
-      setShowDownloadPopup(true);
+      setShowDownloadPopup(false);
     }
   }, []);
 
